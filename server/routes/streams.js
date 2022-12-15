@@ -79,6 +79,8 @@ router.put("/:id", (req, res, next) => {
 });
 
 router.delete("/:id", (req, res, next) => {
+  console.log("llego a eliminar");
+  console.log(req.params.id);
   Stream.findOne({ id: req.params.id })
     .then((stream) => {
       Stream.deleteOne({ id: req.params.id })

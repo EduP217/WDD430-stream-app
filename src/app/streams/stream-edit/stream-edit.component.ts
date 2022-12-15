@@ -25,6 +25,8 @@ export class StreamEditComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       const { id } = params;
 
+      console.log(id);
+
       if (id == undefined || id == null) {
         this.editMode = false;
         return;
@@ -52,6 +54,7 @@ export class StreamEditComponent implements OnInit {
 
   onRemoveItem() {
     this.service.deleteStream(this.stream);
+    this.router.navigateByUrl('/streams');
   }
 
   onCancel() {

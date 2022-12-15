@@ -1,10 +1,12 @@
-<div class="card" style="width: 18rem">
-  <img [src]="stream.thumbnail" class="card-img-top" alt="..." />
-  <div class="card-body">
-    <h5 class="card-title">{{stream.name}}</h5>
-    <p class="card-text">
-      {{stream.shortDescription}}
-    </p>
-    <a [routerLink]="stream.id" class="btn btn-success">Edit</a>
+<div class="col-md-4 col-sm-3">
+  <div class="card" style="width: 18rem">
+    <img [src]="stream.thumbnail" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ stream.name }}</h5>
+      <p class="card-text">
+        {{ stream.shortDescription }}
+      </p>
+      <a routerLink="{{ stream.id }}/edit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Edit</a>
+    </div>
   </div>
 </div>

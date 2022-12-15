@@ -98,13 +98,13 @@
 
   <div class="row">
     <div class="col-xs-12 btn-toolbar">
-      <button class="btn btn-success" type="submit" [disabled]="!f.valid">
+      <button class="btn btn-success" type="submit" [disabled]="!f.valid" data-toggle="modal" data-target="#exampleModal">
         Save
       </button>
-      <button class="btn btn-primary" type="button" (click)="onCancel()">
+      <button class="btn btn-primary" type="button" (click)="onCancel()" data-toggle="modal" data-target="#exampleModal">
         Cancel
       </button>
-      <button class="btn btn-danger" type="button" (click)="onRemoveItem()" *ngIf="editMode">
+      <button class="btn btn-danger" type="button" (click)="onRemoveItem()" data-toggle="modal" data-target="#exampleModal" *ngIf="editMode">
         Drop
       </button>
     </div>
