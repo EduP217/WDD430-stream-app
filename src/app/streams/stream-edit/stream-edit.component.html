@@ -1,1 +1,116 @@
-<p>stream-edit works!</p>
+<form id="contact-edit" #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        [ngModel]="stream.name"
+        #name="ngModel"
+        class="form-control required"
+        size="120"
+        max="120"
+        required
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <label for="shortDescription">Short Description:</label>
+      <input
+        type="text"
+        id="shortDescription"
+        name="shortDescription"
+        [ngModel]="stream.shortDescription"
+        #shortDescription="ngModel"
+        class="form-control required"
+        size="120"
+        max="255"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <label for="longDescription">Long Description:</label>
+      <input
+        type="text"
+        id="longDescription"
+        name="longDescription"
+        [ngModel]="stream.longDescription"
+        #longDescription="ngModel"
+        class="form-control invalid"
+        size="150"
+        max="255"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <label for="thumbnail">Thumbnail:</label>
+      <input
+        type="text"
+        id="thumbnail"
+        name="thumbnail"
+        [ngModel]="stream.thumbnail"
+        #thumbnail="ngModel"
+        class="form-control"
+        size="150"
+        max="255"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <label for="fullImage">Full Image:</label>
+      <input
+        type="text"
+        id="fullImage"
+        name="fullImage"
+        [ngModel]="stream.fullImage"
+        #fullImage="ngModel"
+        class="form-control"
+        size="150"
+        max="255"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <label for="keywords">Keywords:</label>
+      <input
+        type="text"
+        id="keywords"
+        name="keywords"
+        [ngModel]="stream.keywords"
+        #keywords="ngModel"
+        class="form-control"
+        size="150"
+        max="255"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 btn-toolbar">
+      <button class="btn btn-success" type="submit" [disabled]="!f.valid">
+        Save
+      </button>
+      <button class="btn btn-primary" type="button" (click)="onCancel()">
+        Cancel
+      </button>
+      <button class="btn btn-danger" type="button" (click)="onRemoveItem()" *ngIf="editMode">
+        Drop
+      </button>
+    </div>
+  </div>
+
+  <div class="alert alert-danger" *ngIf="!f.valid">
+    The Name is required.
+  </div>
+</form>

@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TemplateComponent } from './template/template.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { StreamsComponent } from './streams/streams.component';
 import { CommunityComponent } from './community/community.component';
@@ -24,11 +23,18 @@ import { StreamDetailComponent } from './streams/stream-detail/stream-detail.com
 import { StreamEditComponent } from './streams/stream-edit/stream-edit.component';
 
 import { DropdownDirective } from './ext/dropdown.directive';
+import { HeaderComponent } from './template/header/header.component';
+import { FooterComponent } from './template/footer/footer.component';
+import { MainComponent } from './template/main/main.component';
+import { SidebarComponent } from './template/sidebar/sidebar.component';
+import { NavbarComponent } from './template/navbar/navbar.component';
+import { LoginComponent } from './authentication/login/login.component';
+import { RegisterComponent } from './authentication/register/register.component';
+import { StreamFilterPipe } from './streams/stream-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateComponent,
     AuthenticationComponent,
     StreamsComponent,
     CommunityComponent,
@@ -46,6 +52,14 @@ import { DropdownDirective } from './ext/dropdown.directive';
     StreamDetailComponent,
     StreamEditComponent,
     DropdownDirective,
+    HeaderComponent,
+    FooterComponent,
+    MainComponent,
+    SidebarComponent,
+    NavbarComponent,
+    LoginComponent,
+    RegisterComponent,
+    StreamFilterPipe,
   ],
   imports: [
     BrowserModule,

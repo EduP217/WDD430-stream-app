@@ -1,1 +1,8 @@
-<p>stream-list works!</p>
+<div class="row">
+    <div class="col-md-4 col-sm-3">
+        <app-stream-item
+            *ngFor="let item of Streams"
+            [stream]="item"
+        ></app-stream-item>
+    </div>
+</div>

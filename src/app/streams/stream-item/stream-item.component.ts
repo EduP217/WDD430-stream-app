@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Stream } from '../stream.model';
 
 @Component({
   selector: 'app-stream-item',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stream-item.component.css']
 })
 export class StreamItemComponent implements OnInit {
+
+  @Input() stream:Stream = {};
 
   constructor() { }
 

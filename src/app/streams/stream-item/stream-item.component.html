@@ -1,1 +1,10 @@
-<p>stream-item works!</p>
+<div class="card" style="width: 18rem">
+  <img [src]="stream.thumbnail" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">{{stream.name}}</h5>
+    <p class="card-text">
+      {{stream.shortDescription}}
+    </p>
+    <a [routerLink]="stream.id" class="btn btn-success">Edit</a>
+  </div>
+</div>
